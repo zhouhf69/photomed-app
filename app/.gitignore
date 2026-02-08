@@ -1,0 +1,55 @@
+# PhotoMed - Git 忽略文件
+# 开发：菊花教授 周宏锋
+
+# 依赖
+node_modules
+.pnp
+.pnp.js
+
+# 构建输出
+dist
+dist-ssr
+*.local
+
+# 环境变量（安全！不要提交）
+.env
+.env.local
+.env.*.local
+
+# 编辑器
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 测试
+coverage
+.nyc_output
+
+# 日志
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 缓存
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# Vercel
+.vercel
+
+# 其他
+*.tar.gz
+*.zip
+zi0li56j

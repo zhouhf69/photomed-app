@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+  PhotoMed - Photo-first Medical Intelligence Engine
+  以手机照相为医疗数据主入口的通用医疗智能底座
+  
+  开发：菊花教授 周宏锋
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Mobile viewport optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <!-- PWA support -->
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="PhotoMed" />
+    <!-- Mobile app icons -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    <!-- Prevent telephone number detection -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Disable tap highlight on mobile -->
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>PhotoMed 医疗智能底座</title>
+    <style>
+      /* Prevent pull-to-refresh on mobile */
+      body {
+        overscroll-behavior-y: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

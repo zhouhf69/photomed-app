@@ -1,0 +1,60 @@
+# PhotoMed - Docker 忽略文件
+# 开发：菊花教授 周宏锋
+
+# 依赖
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# 构建输出
+dist
+dist-ssr
+*.local
+
+# 环境变量（安全）
+.env
+.env.local
+.env.*.local
+
+# 编辑器
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 测试
+coverage
+.nyc_output
+
+# 日志
+logs
+*.log
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# GitHub
+.github
+
+# 文档
+*.md
+!README.md
+DEPLOY.md
+PATENT_ADVICE.md
+LEGAL_NOTICE.md
+GIT_FIX_GUIDE.md
+
+# Docker（避免循环）
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 其他
+*.tar.gz
+*.zip
+zi0li56j

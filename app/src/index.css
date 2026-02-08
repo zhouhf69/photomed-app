@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* PhotoMed Custom Styles */
+@layer components {
+  .photomed-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .photomed-card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100;
+  }
+  
+  .photomed-btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors;
+  }
+  
+  .photomed-btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium px-6 py-3 rounded-lg border border-gray-200 transition-colors;
+  }
+  
+  .photomed-section {
+    @apply py-16 px-4;
+  }
+  
+  .photomed-container {
+    @apply max-w-6xl mx-auto;
+  }
+}
+
+/* Mobile Optimizations */
+@layer components {
+  /* Safe area for notched phones */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-area-x {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Mobile touch targets - minimum 44px */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .touch-target-lg {
+    @apply min-h-[48px] min-w-[48px];
+  }
+  
+  /* Mobile button styles */
+  .mobile-btn {
+    @apply touch-target-lg px-6 py-3 text-base font-medium rounded-xl;
+  }
+  
+  /* Mobile card styles */
+  .mobile-card {
+    @apply rounded-2xl shadow-sm border border-gray-100;
+  }
+  
+  /* Mobile input styles */
+  .mobile-input {
+    @apply text-base px-4 py-3.5 rounded-xl;
+  }
+  
+  /* Bottom sheet for mobile */
+  .bottom-sheet {
+    @apply fixed bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  
+  /* Mobile navigation */
+  .mobile-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Swipeable cards */
+  .swipeable-card {
+    @apply transition-transform duration-200 ease-out;
+    touch-action: pan-y;
+  }
+  
+  /* Pull to refresh indicator */
+  .pull-indicator {
+    @apply flex items-center justify-center py-4 text-gray-500;
+  }
+  
+  /* Mobile optimized text */
+  .mobile-text-sm {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .mobile-text-base {
+    @apply text-base leading-relaxed;
+  }
+  
+  .mobile-text-lg {
+    @apply text-lg leading-relaxed;
+  }
+  
+  /* Mobile spacing */
+  .mobile-section {
+    @apply py-4 px-4;
+  }
+  
+  /* Floating action button for mobile */
+  .fab {
+    @apply fixed bottom-20 right-4 w-14 h-14 rounded-full shadow-lg flex items-center justify-center;
+  }
+  
+  /* Mobile header */
+  .mobile-header {
+    @apply sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100;
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  /* Hide scrollbar for mobile */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mobile-specific media queries */
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+  
+  /* Larger touch targets on mobile */
+  button, 
+  [role="button"],
+  a,
+  input,
+  select,
+  textarea {
+    @apply touch-target;
+  }
+  
+  /* Optimize card padding for mobile */
+  .card-mobile {
+    @apply p-4;
+  }
+  
+  /* Full-width buttons on mobile */
+  .btn-full-mobile {
+    @apply w-full;
+  }
+  
+  /* Mobile-optimized grid */
+  .grid-mobile-1 {
+    @apply grid-cols-1;
+  }
+  
+  /* Stack elements on mobile */
+  .stack-mobile {
+    @apply flex-col;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Dark mode support */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark .bg-gray-50 {
+  @apply bg-gray-800;
+}
+
+.dark .bg-white {
+  @apply bg-gray-900;
+}
+
+.dark .text-gray-900 {
+  @apply text-gray-100;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-400;
+}
+
+.dark .border-gray-200 {
+  @apply border-gray-700;
+}
+
+.dark .border-gray-100 {
+  @apply border-gray-800;
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+  .mobile-nav {
+    @apply bg-gray-900 border-gray-800;
+  }
+  
+  .bottom-sheet {
+    @apply bg-gray-900;
+  }
+}
+
+/* Print styles for medical reports */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: none !important;
+  }
+}
