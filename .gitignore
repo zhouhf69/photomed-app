@@ -39,3 +39,8 @@ coverage/
 # Misc
 .cache/
 .temp/
+
+# Downloaded files
+* - Kimi.html
+* - Kimi_files/
+*.下载
