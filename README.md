@@ -1,1 +1,0 @@
-# photomed-app
